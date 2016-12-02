@@ -1,22 +1,21 @@
 package com.tsi.entity;
 
-import java.util.HashMap;
-import java.util.List;
-import java.util.Map;
+import java.util.*;
 
 public class Document {
-    int id;
+
+    UUID id;
     String name;
     String title;
     Map<String, String> indexMap = new HashMap<>();
     String content;
-    List<Comment> comments;
+    List<Comment> comments = new ArrayList<>();
 
-    public int getId() {
+    public UUID getId() {
         return id;
     }
 
-    public void setId(int id) {
+    public void setId(UUID id) {
         this.id = id;
     }
 
@@ -58,6 +57,10 @@ public class Document {
 
     public void setComments(List<Comment> comments) {
         this.comments = comments;
+    }
+
+    public void addComment(Comment comment) {
+        this.comments.add(comment);
     }
 
 }

@@ -1,23 +1,39 @@
 package com.tsi.entity;
 
+import java.util.UUID;
+
 public class Comment {
-    int id;
-    int userId;
+
+    UUID id;
+    UUID userId;
     String content;
 
-    public int getId() {
+    public Comment() {
+    }
+
+    public Comment(String content) {
+        this.content = content;
+    }
+
+    public Comment(UUID id, UUID userId, String content) {
+        this.id = id;
+        this.userId = userId;
+        this.content = content;
+    }
+
+    public UUID getId() {
         return id;
     }
 
-    public void setId(int id) {
+    public void setId(UUID id) {
         this.id = id;
     }
 
-    public int getUserId() {
+    public UUID getUserId() {
         return userId;
     }
 
-    public void setUserId(int userId) {
+    public void setUserId(UUID userId) {
         this.userId = userId;
     }
 
